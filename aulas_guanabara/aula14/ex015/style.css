@@ -1,0 +1,33 @@
+body{
+    text-align: center;
+    background-color: rgb(0, 238, 255);
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    color: white;
+}
+section{
+    background-color: white;
+    border-radius: 10px;
+    width: 500px;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.24);
+}
+form{
+    text-align: left;
+    width: 235px; 
+}
+label{
+    display: inline-block;
+    width: 60px;
+    margin-bottom: 10px;
+}
+div{
+    height: 70px;
+    overflow: auto;
+}
+footer{
+    color: white;
+}

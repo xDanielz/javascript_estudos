@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocidade</title>
+</head>
+<body>
+    <h1>Pardal</h1>
+    <p>
+        Informe sua Velocidade: <input type="number" name="idvelocidade" id="idvelocidade"> Km/h
+        <input type="button" value="Passar">
+    </p>
+    <p id="idresultado"></p>
+
+    <script>
+        let passar = document.querySelector('input[value=Passar]')
+        passar.addEventListener('click', pardal)
+        
+        function pardal(){
+            let resultado = document.getElementById('idresultado');
+            let velocidade = document.getElementById('idvelocidade');
+
+            if(velocidade.value > 60){
+                resultado.innerHTML = 'Excedeu o limite permitido. <strong>Altuado<strong>';
+            }
+            else{
+                resultado.innerText = '';
+            }
+        }
+
+
+    </script>
+</body>
+</html>

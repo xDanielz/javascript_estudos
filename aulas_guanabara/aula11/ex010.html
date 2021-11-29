@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <p>
+        Informe seu pais de nascença: <input type="text" name="namepais" id="idpais">
+        <input type="button" value="Ir">
+        <span id="idres"></span>
+    </p>
+
+    <script>
+        let irbt = document.querySelector('input[type=button]');
+        irbt.addEventListener('click',nacionalidade);
+
+        function nacionalidade(){
+            let pais = document.getElementById('idpais');
+            let res = 'Você é ';
+            pais = pais.value;
+
+            if(pais.toUpperCase() == 'BRASIL'){
+                res += 'Brasileiro';
+            }
+            else{
+                res += 'Estrangeiro'
+            }
+            alert(res);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regra de Três</title>
+    <style>
+        *{
+            text-align: center;
+            font-size: 19px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            font-size: 2em;
+        }
+        div#regradetres{
+            width: 350px;
+            height: 250px;
+            padding: 10px;
+            box-shadow: 0px 0px 1px 0px;
+            margin: auto;
+        }
+        div#xy, div#yz{
+            width: 100%;
+        }
+        input[type='number']{
+            width: 100px;
+            height: 50px;
+        }
+        input[type='button']{
+            display: block;
+            position: relative;
+            width: 100px;
+            height: 30px;
+            top: 20px;
+            margin: auto;
+        }
+        span{
+            margin: 10px 20px;
+        }
+        div#middle{
+            margin: 15px 0px;
+        }
+        div#res{
+            position: relative;
+            bottom: -24px;
+            width: 102px;
+            height: 52px;
+            border: 1px solid rgba(0, 0, 0, 0.452);
+            padding: 1px 2px;
+            display: inline-block;
+            overflow: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Regra de Três</h1>
+    <div id="regradetres">
+
+        <div id="xy">
+            <input type="number" name="x" id="x">
+            <span>Está para</span>
+            <input type="number" name="y" id="y">
+        </div>
+
+        <div id="middle">Assim como</div>
+
+        <div id="yz">
+            <input type="number" name="z" id="z">
+            <span>Está para</span>
+            <div id="res"><span id="result"></span></div>
+        </div>
+
+        <input id='calcular' type="button" value="Calcular">
+    </div>
+
+    <script>
+        let bt = document.getElementById('calcular');
+        bt.addEventListener('click', regra_de_tres);
+
+        function regra_de_tres(){
+            let xyz = document.getElementsByTagName('input');
+            let result = document.getElementById('result');
+
+            let x = xyz[0].value;
+            let y = xyz[1].value;
+            let z = xyz[2].value;
+
+            x = Number(x);
+            y = Number(y);
+            z = Number(z);
+
+            result.innerHTML = `<strong>${(z * y) / x}</strong>`;
+        }
+    </script>
+</body>
+</html>

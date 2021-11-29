@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        div{
+            text-align: center;
+            width: 200px;
+            height: 168px;
+            margin: auto;
+            box-shadow: 0px 0px 1px 0px;
+            padding: 5px;
+            
+        }
+        input[type="number"]{
+            display: block;
+            width: 100px;
+            margin: 5px auto;
+        }
+        input[value="Somar"]{
+            display: block;
+            margin-top: -10px;
+            margin: auto;
+        }
+        input#tn2{
+            margin-bottom: 0px;
+        }
+        div#result{
+            margin-top: 1px;
+            margin: auto;
+            width: 100px;
+            height: 20px;
+            box-shadow: 0px 0px 1px 0px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>SOMANDO</h1>
+    <div>
+        <input type="number" name="tn1" id="tn1">
+        +
+        <input type="number" name="tn2" id="tn2">
+        =
+        <div id="result"></div><br>
+        <input type="button" value="Somar" onclick="somar()">
+    </div>
+
+    <script>
+        function somar(){
+            let n1 = document.getElementById('tn1');
+            let n2 = document.getElementById('tn2');
+            let res = document.getElementById('result')
+            n1 = Number(n1.value);
+            n2 = Number(n2.value);
+            res.innerText = n1+n2
+        }
+    </script>
+</body>
+</html>

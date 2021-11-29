@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id='area'>
+        batatinha frita
+    </div>
+
+    <script>
+        let area = document.getElementById('area')
+        area.addEventListener('click', clicou)
+        let c = 0
+        let palavras = ['Clicou']
+        palavras[1] = area.innerText
+
+        function clicou(){
+            area.innerText = palavras[c]
+            c = (c + 1) % 2
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>

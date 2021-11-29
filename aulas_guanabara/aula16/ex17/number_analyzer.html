@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de números</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <h1>Analisador de Números</h1>
+        <section>
+            <form>
+                <label for="num">Número(entre 1, 100):</label>
+                <input type="number" name="num" id="num" max="100">
+                <input type="button" value="Adicionar">
+            </form>
+
+            <select name="numbers_list" id="number_list" multiple></select>
+            <input type="button" value="Limpar">
+            <div id="result"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Daniel Rodrigues</p>
+    </footer>
+    <script src="numberAnalyzer.js"></script>
+</body>
+</html>

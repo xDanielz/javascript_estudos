@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        main{
+            background-color: white;
+            width: 80%;
+            max-width: 600px;
+            height: 80%;
+            margin: auto;
+            box-shadow: 0px 0px 1px 0px;
+            padding: 20px;
+        }
+        header > h1{
+            text-align: center;
+        }
+        header ul{
+            text-align: center;
+            border: 0.5px solid rgba(0, 0, 0, 0.452);
+        }
+        header li{
+            display: inline;
+            margin-right: 15px;
+        }
+        article{
+            width: 80%;
+            background-color: rgba(128, 128, 128, 0.39);
+            min-height: 12em;
+            box-shadow: 0px 0px 1px 0px;
+            margin: 10px auto 20px auto;  
+            padding: 10px;
+            border-radius: 10px;
+            overflow: auto;
+        }
+        p{
+            width: 200px;
+            float: left;
+        }
+        div{
+            width: 100px;
+            height:100px;
+            float: left;
+            position: relative;
+            top: 15%;
+            left: 7%;
+            box-shadow: 1px;
+            opacity: 60%;
+        }
+        div#amarelo{
+            background-color: yellow;
+        }
+        div#red{
+            background-color: red;
+        }
+        div#verde{
+            background-color: green;
+        }
+        footer{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1 id="x">LOGO</h1>
+            <nav>
+                <ul>
+                    <li>Opcão1</li>
+                    <li>Opcão2</li>
+                    <li>Opcão3</li>
+                    <li>Opcão4</li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus rem ratione dolorem eum dolorum amet earum eaque debitis illo, distinctio labore nisi. Cupiditate alias temporibus nostrum numquam doloremque iure illo?
+            </p>
+            <div id="amarelo"></div>
+        </article>
+
+        <article>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ex dicta, perspiciatis deleniti repudiandae accusamus explicabo delectus maxime inventore iure a tenetur molestias adipisci quam nihil eveniet, vel labore omnis.
+            </p>
+            <div id="red">dafasd</div>
+            <script>
+                var d = document.getElementById('red');
+                d.style.backgroundColor = 'blue';        
+            </script>
+        </article>
+            
+        <article>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, quam! Architecto repudiandae quaerat eligendi voluptatem! Beatae maxime quae voluptatum veritatis, natus molestiae velit voluptate sequi tenetur porro quaerat cumque temporibus.
+            </p>
+            <div id="verde"></div>
+        </article>
+
+        <footer>
+            <span>&copy;Copyright</span> 
+        </footer>
+    </main>
+</body>
+</html>
