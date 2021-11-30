@@ -13,11 +13,11 @@ function addnumber(){
     let num = Number(numb.value);
 
     if(num < 1 || num > 100){
-        alert('[ERRO!] Número apenas entre 0 e 100.')
+        alert('[ERRO!] Número apenas entre 0 e 100.');
         return;
     }
-
-    if(numbers.indexOf(num) != -1){
+    alert(numbers.indexOf(num) != -1);
+    if(num in numbers){
         alert(`[ERRO!] Número ${num} Já está na lista.`);
         return;
     }
